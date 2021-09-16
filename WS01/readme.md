@@ -290,7 +290,7 @@ vendingmachine.cpp
 drink.h
 drink.cpp
 util.h
-util.h
+util.cpp
 ```
 
 
@@ -427,7 +427,7 @@ vendingmachine.cpp
 drink.h
 drink.cpp
 util.h
-util.h
+util.cpp
 file.h
 file.cpp
 ```
