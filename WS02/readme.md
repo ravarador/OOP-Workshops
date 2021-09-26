@@ -99,7 +99,7 @@ Write a function to overload the fighter function (remember that overloaded func
 
    - Dynamically allocate a new Array of type Fighter in a Fighter pointer. (The size of the new Fighter Array should be one more than the size of the Competition fighters so the new fighter can be added.)
    - In a loop, copy the data from the competition fighters array (provided as the function parameter) to the new array of fighters. (*Note that since the new array is one element larger than the fighters array in the Competition, the last element of the new array will remain untouched*).
-   - Prompt the user to enter the fighter information by displaying the following message `Enter the information of the new fighter:<NEWLINE>`.
+   - Prompt the user to enter the fighter information by displaying the following message `Information of the new fighter:<NEWLINE>`.
    - Use your `fighter` overloaded function to read the name and then the power of the new fighter into the last element of the new fighter array. 
    - Remove the fighters array of the Competition from memory (delete the fighters array in Competition object)
    - Set the fighters pointer in the Competition to the new fighters pointer.
