@@ -166,7 +166,7 @@ To accomplish this, create two modules; the Book and the Library.
 The Book should hold a single record of the book on loan in the report file.
 The Library should hold a dynamically allocated array of books and provide the required reports.
 
-> Note: Reading and accessing the data file and populatioing the Modules are done by the tester program. You are not implmenting any file related code. 
+> Note: Reading and accessing the data file and populating the Modules are done by the tester program. You are not implementing any file-related code
 
 ## The Book module. (The Book class)
 ### Constant Values
