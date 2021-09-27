@@ -1,7 +1,7 @@
 # OOP244 Workshops
 ## Reviewing the Workshop and milestones of the week
 This session will be done every week on Tuesady around 11:00 AM for about 45 minutes, everybody is welcome to join<br />
-[Click here to join this week's session]()
+[Click here to join this week's session at 11:00 am on Tuesdays]()
 ### Previous session recordings:
 TBA
 
