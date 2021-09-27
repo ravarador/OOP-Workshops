@@ -1,5 +1,9 @@
 # Workshop #3: Member Functions and Privacy
 * Version 0.7   Part 1 only
+* version 0.8   
+   * Part 1 (moved header, footer and isEmpty to private)
+   * Part 2 published
+ 
 
 In this workshop, you will use member functions, privacy, safe empty state and formatting the output to complete your work.
 
@@ -265,39 +269,12 @@ An integer to hold the size of the dynamic array of books
 
 An integer to keep track of the number of books that are set to valid values in the books array. 
 
-### One Private Member function
-#### setEmpty
-
-Returns void and receives nothing.
+### Private Member functions
+```C++
+void setEmpty();
+```
 
 setEmpty sets the name to an empty Cstring and all the other properties to zero and nullptr.
-
-### Public Member functions
-
-```C++
-void initialize(const char* name, int noOfBooks);
-```
-
-If the name is not null and not an empty Cstring and noOfBooks is greater than zero, it will:
-   - copy the name into the library name
-   - set the size of **books** array to the noOfBooks
-   - allocate a dynamic array of Books to the **noOfBooks**.  (if the allocation fails it will set the Library into a safe empty state)
-
-Otherwise, it will set the Library into a safe empty state. 
-
-```C++
-bool addBook(const char* book_title, int sku, int loanDays);
-```
-
-If the number of added books is less than the size of the books array, it will use the set method of the book to set the values of the next book in the array to the incoming arguments. If after setting the book, the newly added book is valid (not in a safe empty state) it will add one to the number of books and return true. 
-
-In all the other cases it will return false.
-
-```C++
-void clear();
-```
-
-Releases the allocated memory and sets the books pointer to nullptr.
 
 ```C++
 bool isEmpty()const;
@@ -334,6 +311,34 @@ void footer()const;
 ```
 
 - prints dashes ('-') 78 times and goes to a new line
+
+
+### Public Member functions
+
+```C++
+void initialize(const char* name, int noOfBooks);
+```
+
+If the name is not null and not an empty Cstring and noOfBooks is greater than zero, it will:
+   - copy the name into the library name
+   - set the size of **books** array to the noOfBooks
+   - allocate a dynamic array of Books to the **noOfBooks**.  (if the allocation fails it will set the Library into a safe empty state)
+
+Otherwise, it will set the Library into a safe empty state. 
+
+```C++
+bool addBook(const char* book_title, int sku, int loanDays);
+```
+
+If the number of added books is less than the size of the books array, it will use the set method of the book to set the values of the next book in the array to the incoming arguments. If after setting the book, the newly added book is valid (not in a safe empty state) it will add one to the number of books and return true. 
+
+In all the other cases it will return false.
+
+```C++
+void clear();
+```
+
+Releases the allocated memory and sets the books pointer to nullptr.
 
 ```C++
 void display(const char* substr);
@@ -527,6 +532,278 @@ and follow the instructions.
 > **⚠️Important:** Please note that a successful submission does not guarantee full credit for this workshop. If the professor is not satisfied with your implementation, your professor may ask you to resubmit. Re-submissions will attract a penalty.
 
 
-# DIY (50%) 
+# DIY (50%) Account Balance Interest Report
 
-Under Construction.
+Seneca Bank creates a daily report of the credit card accounts and the time of their last payment in days in following format:
+
+```text
+Account Number
+comma
+Balance
+comma
+Days passed since the last payment
+newline
+```
+
+Example:
+
+```text
+97988775,852283.02,6
+90837261,1776257.40,14
+96925213,471948.98,56
+97687611,849206.85,47
+90251542,878439.19,9
+99792020,432107.95,55
+99456993,1676602.38,52
+91668387,1980439.23,53
+97717004,853368.22,8
+90862850,1264645.87,30
+99493936,37329.10,58
+93182966,1742978.32,54
+94523817,161271.42,23
+96829419,363081.73,43
+94222780,323362.90,21
+```
+
+Your task for this part is to create the modules required to provide functionalities for other programmers to create on-screen reports of:
+
+- All the accounts, their balance and days since their last payment and the Interest Charges
+
+```text
+----------------------------------------
+>>> Seneca Bank & Trust <<<
+----------------------------------------
+Row Accnt No       Balance  Days Interest
+--- ---------- ------------ ---- --------
+1    97988775     852283.02  6
+2    90837261    1776257.40  14
+3    96925213     471948.98  56  20636.45
+4    97687611     849206.85  47  31164.73
+5    90251542     878439.19  9
+6    99792020     432107.95  55  18556.96
+7    99456993    1676602.38  52  68074.65
+8    91668387    1980439.23  53  81957.63
+9    97717004     853368.22  8
+10   90862850    1264645.87  30
+11   99493936      37329.10  58   1690.55
+12   93182966    1742978.32  54  73491.61
+13   94523817     161271.42  23
+14   96829419     363081.73  43  12190.59
+15   94222780     323362.90  21
+-----------------------------------------
+              Total interest:   307763.17
+```
+
+- All the accounts that their payment is past due with interest.
+
+```text
+INTEREST ONLY LIST!
+----------------------------------------
+>>> Seneca Bank & Trust <<<
+----------------------------------------
+Row Accnt No       Balance  Days Interest
+--- ---------- ------------ ---- --------
+1    96925213     471948.98  56  20636.45
+2    97687611     849206.85  47  31164.73
+3    99792020     432107.95  55  18556.96
+4    99456993    1676602.38  52  68074.65
+5    91668387    1980439.23  53  81957.63
+6    99493936      37329.10  58   1690.55
+7    93182966    1742978.32  54  73491.61
+8    96829419     363081.73  43  12190.59
+-----------------------------------------
+              Total interest:   307763.17
+```
+
+
+## Implementation
+To accomplish this we suggest the creation of two modules (classes); the Account and the Bank. 
+
+The Account should hold a single record of the credit card payment record in the report file.
+
+The Bank should hold a dynamically allocated array of Accounts and provide the required reports.
+
+> Note: Reading and accessing the data file and populating the modules are done by the tester program. You are not implementing any file-related code. 
+
+> ***You may freely use/copy any logic or code needed from the LAB section!***
+
+### Constant values, 
+- The Interest-free payment period is always 30 days.
+- The Interest rate is always 28.5% annually.
+
+>Any account that is not paid in full within 30 days will be charged by an interest based on the full amount and the total number of days. 
+
+For example, if an account's balance is 1000 Dollars and the days since the last payment is less than or equal to 30 days, no interest will be charged. But if an account's last payment was 31 days ago, then an interest of 
+```text
+NoOfDays x (InterestRate/NumberOfDaysInAYear) x AccountBalance
+```
+which in this example will be 31 x (0.285/365) x 1000, will be charged (approximately 24 Dollars 20 Cents).
+
+## Mandatory publicly accessible methods of Bank Module
+
+You must have the following public methods available in the Bank class.
+
+
+```C++
+void initialize(const char* bank_name, int noOfAccounts);
+```
+If the bank_name is not null and it is not an empty Cstring and also the noOfAccouts is greater than zero, this function will store the name of the bank and the number of accounts the Bank can dynamically hold. It will also set all other possible properties to thier default values. 
+
+Otherwise, it will set the bank into a safe invalid empty state.
+
+```C++
+bool addAccount(int account_number, double balance, int daysSinceLastPayment);
+```
+
+This function will insert the account information into the next available Account record in the Bank. The function should fail and return false if the Bank accounts are full or if any of the information is invalid (i.e. if any of the arguments have a value less than or equal to zero)
+
+```C++
+void display(bool intrestOnly=false)const;
+```
+
+Displays the accounts in the Bank as shown in the examples above.
+
+```C++
+void clear();
+```
+
+Released the memory allocated by the Bank Class.
+
+## The tester program 
+```C++
+// Workshop #3:
+// Version: 0.9
+// Date: 2021/09/26
+// Author: Fardad Soleimanloo
+// Description:
+// This file tests the DIY section of your workshop
+///////////////////////////////////////////////////
+#define _CRT_SECURE_NO_WARNINGS
+#include<iostream>
+#include"Bank.h"
+using namespace std;
+using namespace sdds;
+int noOfRecs(FILE* fptr);
+void readAccounts(Bank& L, FILE* fptr);
+int main() {
+   FILE* fptr = fopen("accounts.csv", "r");
+   Bank b[4];
+   Bank L;
+   int i;
+   b[0].initialize("", 10);
+   b[1].initialize(nullptr, 20);
+   b[2].initialize("something", 0);
+   b[3].initialize("something", -1);
+   for (i = 0; i < 4; i++) {
+      b[i].display();
+      b[i].clear();
+   }
+   L.initialize("Seneca Bank & Trust", noOfRecs(fptr));
+   readAccounts(L, fptr);
+   L.display();
+   L.display(true);
+   L.clear();
+   fclose(fptr);
+}
+int noOfRecs(FILE* fptr) {
+   int no = 0;
+   int newline = 0;
+   while ((newline = fgetc(fptr)) != EOF) {
+      no += (newline == '\n');
+   }
+   rewind(fptr);
+   return no;
+}
+void readAccounts(Bank& L, FILE* fptr) {
+   int noOfRecs = ::noOfRecs(fptr);
+   int accNo;
+   double balance;
+   int days;
+   for (int i = 0; i < noOfRecs; i++) {
+      fscanf(fptr, "%d,%lf,%d\n", &accNo, &balance, &days);
+      L.addAccount(accNo, balance, days);
+   }
+}
+
+```
+## The ouptut of the tester program
+```text
+Invalid Bank
+Invalid Bank
+Invalid Bank
+Invalid Bank
+----------------------------------------
+>>> Seneca Bank & Trust <<<
+----------------------------------------
+Row Accnt No       Balance  Days Interest
+--- ---------- ------------ ---- --------
+1    97988775     852283.02  6
+2    90837261    1776257.40  14
+3    96925213     471948.98  56  20636.45
+4    97687611     849206.85  47  31164.73
+5    90251542     878439.19  9
+6    99792020     432107.95  55  18556.96
+7    99456993    1676602.38  52  68074.65
+8    91668387    1980439.23  53  81957.63
+9    97717004     853368.22  8
+10   90862850    1264645.87  30
+11   99493936      37329.10  58   1690.55
+12   93182966    1742978.32  54  73491.61
+13   94523817     161271.42  23
+14   96829419     363081.73  43  12190.59
+15   94222780     323362.90  21
+-----------------------------------------
+              Total interest:   307763.17
+
+INTEREST ONLY LIST!
+----------------------------------------
+>>> Seneca Bank & Trust <<<
+----------------------------------------
+Row Accnt No       Balance  Days Interest
+--- ---------- ------------ ---- --------
+1    96925213     471948.98  56  20636.45
+2    97687611     849206.85  47  31164.73
+3    99792020     432107.95  55  18556.96
+4    99456993    1676602.38  52  68074.65
+5    91668387    1980439.23  53  81957.63
+6    99493936      37329.10  58   1690.55
+7    93182966    1742978.32  54  73491.61
+8    96829419     363081.73  43  12190.59
+-----------------------------------------
+              Total interest:   307763.17
+
+```
+
+## Reflection
+
+Study your final solutions for each deliverable of the workshop, reread the related parts of the course notes, and make sure that you have understood the concepts covered by this workshop.  **This should take no less than 30 minutes of your time and the result is suggested to be at least 150 words in length.**
+
+Create a file named `reflect.txt` that contains your detailed description of the topics that you have learned in completing this workshop and mention any issues that caused you difficulty.
+
+You may be asked to talk about your reflection (as a presentation) in class.
+
+## DIY Submission (part 2)
+### Files to submit:  
+```Text
+Account.cpp  
+Account.h  
+Bank.cpp  
+Bank.h  
+WS3P2Tester.cpp
+accounts.csv
+```
+
+Upload your source code and data file to your `matrix` account. Compile and run your code using the `g++` compiler as shown above and make sure that everything works properly.
+
+Then, run the following command from your account
+- replace `profname.proflastname` with your professor’s Seneca userid
+- replace **??** with your subject code (2**00** or 2**44**)
+- replace **#** with the workshop number
+- replace **X** with the workshop part number (**1** or **2**) 
+```text
+~profname.proflastname/submit 2??/w#/pX
+```
+
+and follow the instructions.
+
+> **⚠️Important:** Please note that a successful submission does not guarantee full credit for this workshop. If the professor is not satisfied with your implementation, your professor may ask you to resubmit. Re-submissions will attract a penalty.
