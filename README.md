@@ -1,4 +1,10 @@
 # OOP244 Workshops
+## Reviewing the Workshop and milestones of the week
+This session will be done every week on Tuesady around 11:00 AM for about 45 minutes, everybody is welcome to join<br />
+[Click here to join this week's session]()
+### Previous session recordings:
+TBA
+
 ## IPC144 review for OOP244 students
 Last semester we conducted a review session on the topics of IPC144 to prepare students for OOP244. The recording and the notes of the session are available at the link below. We recommend watching the recording for the problematic topics of IPC144.
 ### [IPC144/BTP100 Review Session for OOP244/BTP200 Students recording](https://github.com/Seneca-244200/OOP244NABC-Notes#review-recordings)
