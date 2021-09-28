@@ -1,4 +1,11 @@
 # OOP244 Workshops
+## Overveiwing the Workshop and Project milestone of the week
+This session will be done every week on Tuesady around 11:00 AM for about 45 minutes.<br />
+You are welcome to join using your real Seneca Name (what is on your student card, otherwise you will be kicked out).<br />
+[Click here to join this week's session at 11:00 am on Tuesdays](https://connect.rna2.blindsidenetworks.com/invite/to?c=vPBUJx9RpMGCM1kksPgNSsyLLtihAyp-EPwlKXaPR3s&m=06668cdb24cf92e76fb010abd90f3fd5d34e1caa&t=1632840530747&u=senecacollege)
+### Previous session recordings:
+TBA
+
 ## IPC144 review for OOP244 students
 Last semester we conducted a review session on the topics of IPC144 to prepare students for OOP244. The recording and the notes of the session are available at the link below. We recommend watching the recording for the problematic topics of IPC144.
 ### [IPC144/BTP100 Review Session for OOP244/BTP200 Students recording](https://github.com/Seneca-244200/OOP244NABC-Notes#review-recordings)

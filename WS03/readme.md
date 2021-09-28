@@ -323,6 +323,7 @@ If the name is not null and not an empty Cstring and noOfBooks is greater than z
    - copy the name into the library name
    - set the size of **books** array to the noOfBooks
    - allocate a dynamic array of Books to the **noOfBooks**.  (if the allocation fails it will set the Library into a safe empty state)
+   - sets the added books member vairable to zero.
 
 Otherwise, it will set the Library into a safe empty state. 
 
