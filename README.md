@@ -6,7 +6,8 @@ You are welcome to join using your **real Seneca Name** (what is on your student
 
 ### [Session notes](https://github.com/Seneca-244200/OOP-Workshops/tree/main/_OverViewNotes)
 ### Previous session recordings:
-TBA
+
+- [Workshop 3](https://recordings.rna2.blindsidenetworks.com/senecacollege/2de1813813f15a29f3fa9041f8f6a6a6b4336ec5-1632840530798/capture/)
 
 ## IPC144 review for OOP244 students
 Last semester we conducted a review session on the topics of IPC144 to prepare students for OOP244. The recording and the notes of the session are available at the link below. We recommend watching the recording for the problematic topics of IPC144.
