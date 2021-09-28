@@ -1,7 +1,7 @@
 # OOP244 Workshops
 ## Overveiwing the Workshop and Project milestone of the week
 This session will be done every week on Tuesady around 11:00 AM for about 45 minutes.<br />
-You are welcome to join using your real Seneca Name (what is on your student card, otherwise you will be kicked out).<br />
+You are welcome to join using your **real Seneca Name** (what is on your student card), otherwise you will be kicked out.<br />
 [Click here to join this week's session at 11:00 am on Tuesdays](https://connect.rna2.blindsidenetworks.com/invite/to?c=vPBUJx9RpMGCM1kksPgNSsyLLtihAyp-EPwlKXaPR3s&m=06668cdb24cf92e76fb010abd90f3fd5d34e1caa&t=1632840530747&u=senecacollege)
 
 ### [Session notes](https://github.com/Seneca-244200/OOP-Workshops/tree/main/_OverViewNotes)
