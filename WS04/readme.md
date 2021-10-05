@@ -221,7 +221,7 @@ void display()const;
 If the **Country** object is not empty this function will print the output in the following format: (For more details see the sample output)
 - prints "Country Name: " then goes to new line
 - prints "No of city: " then goes to new line
-- prints "City name" << "Population" with width 25, left justified.
+- prints "City name" with width 32, left justified, then print "Population".
 - goes to new line
 - will loop through the **m_city** elements, printing each of them.
 - otherwise prints, cout<< "Invalid country object" << endl;
