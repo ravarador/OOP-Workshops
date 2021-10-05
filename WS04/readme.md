@@ -134,7 +134,7 @@ Returns  **m_population**
 ```C++
 void display()const;
 ```
-1) If City object is valid
+1) If City object is valid<br/>
      a) prints "|" <br/>
      b) prints **m_cityName** in 30 spaces ,left justified.<br/>
      c) prints " | "<br/>
