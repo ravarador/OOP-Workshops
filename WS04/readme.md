@@ -137,9 +137,9 @@ void display()const;
 1) If City object is valid
      a) prints "|" 
      b) prints **m_cityName** in 30 spaces ,left justified.
-     c) prints "|"
+     c) prints " | "
      d) prints **m_population** in 10 spaces, right justified.
-     e) prints "|"
+     e) prints " | "
      f) new line
 2) otherwise prints,  cout << "Invalid city" << endl;
 
