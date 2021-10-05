@@ -1,5 +1,5 @@
 # Workshop #4: Constructors, Destructors and Current object
-* Version 0.9
+* Version 1.0 corrected the due day to Thursday!
 
 In this workshop, you will use Constructors,  Destructor and references of the current object to simulate a Country with cities and their population.
 
@@ -17,7 +17,7 @@ Upon successful completion of this workshop, you will have demonstrated the abil
 
 The workshop is divided into two coding parts; part 1, **LAB** and part 2, **DIY**  and one non-coding part:
 
-- ***LAB*** (part 1): worth 50% of the workshop's total price, is due on **Wednesday at 23:59:59** of the week of your scheduled lab.
+- ***LAB*** (part 1): worth 50% of the workshop's total price, is due on **Thursday at 23:59:59** of the week of your scheduled lab.
 
 > Please note that the LAB (part 1) section is **not to be started in your lab session**. You should start it on your own before the day of your lab and join the lab session to ask for help and correct your mistakes.
 
@@ -134,13 +134,13 @@ Returns  **m_population**
 ```C++
 void display()const;
 ```
-1) If City object is valid
-     a) prints "|" 
-     b) prints **m_cityName** in 30 spaces ,left justified.
-     c) prints "|"
-     d) prints **m_population** in 10 spaces, right justified.
-     e) prints "|"
-     f) new line
+1) If City object is valid<br/>
+     a) prints "|" <br/>
+     b) prints **m_cityName** in 30 spaces ,left justified.<br/>
+     c) prints " | "<br/>
+     d) prints **m_population** in 10 spaces, right justified.<br/>
+     e) prints " | "<br/>
+     f) new line<br/>
 2) otherwise prints,  cout << "Invalid city" << endl;
 
 
@@ -219,12 +219,16 @@ Deallocate the memory allocated by **m_name** and **m_city**.
 void display()const;
 ```
 If the **Country** object is not empty this function will print the output in the following format: (For more details see the sample output)
-- prints "Country Name: " then goes to new line
-- prints "No of city: " then goes to new line
-- prints "City name" << "Population" with width 25, left justified.
+- prints "Country Name: " 
+- prints the name and then goes to new line
+- prints "No of city: "
+- printf the number of cities and  then goes to new line
+- prints "City name" with width 32, left justified.
+- prints "Population"
 - goes to new line
 - will loop through the **m_city** elements, printing each of them.
-- otherwise prints, cout<< "Invalid country object" << endl;
+ 
+otherwise prints, cout<< "Invalid country object" << endl;
 
 
 ## Tester program:
@@ -357,7 +361,7 @@ Then, run the following command from your account
 
 and follow the instructions.
 
-> **⚠️Important:** Please note that a successful submission does not guarantee full credit for this workshop. If the professor is not satisfied with your implementation, your professor may ask you to resubmit. Re-submissions will attract a penalty.
+> **??Important:** Please note that a successful submission does not guarantee full credit for this workshop. If the professor is not satisfied with your implementation, your professor may ask you to resubmit. Re-submissions will attract a penalty.
 
 # DIY (50%) Book Chapters
 >Except from the mandatory sections of DIY, all the other parts can be changed by students if they find it necessary as long as the program produces an output that exactly matches the required output. Please note that you can (and probably should) add more member functions to make the DIY part work.
